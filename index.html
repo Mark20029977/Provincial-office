@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สำนักงานจังหวัดมหาสารคาม</title>
+    <style>
+        /* การตั้งค่าทั่วไป */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* ส่วนหัว */
+        header {
+            background-color: #cc6600;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* การตั้งค่าโลโก้ */
+        header img.logo {
+            width: 120px;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            border: 3px solid #cc6600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            flex: 1;
+        }
+        /* เมนูนำทาง */
+        nav {
+            display: flex;  /* ใช้ flexbox เพื่อจัดเมนูเป็นแนวนอน */
+            justify-content: center;
+            background-color: #ff9900;
+            padding: 5px 0;  /* ลดขนาดแถบเมนู */
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;  /* ลดระยะห่างระหว่างเมนู */
+            font-size: 16px;
+            padding: 8px 12px;  /* ลดขนาด padding */
+            border-radius: 3px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        /* ส่วนเนื้อหา */
+        main {
+            padding: 20px;
+            background-color: #f9f2ec;
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #cc6600;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- ใส่โลโก้ที่ต้องการ -->
+        <img class="logo" src="assets/images/โลโก้.png" alt="โลโก้สำนักงานจังหวัดมหาสารคาม">
+        <h1>สำนักงานจังหวัดมหาสารคาม</h1>
+    </header>
+    <nav>
+        <a href="#home">หน้าแรก</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#news">ข่าวประชาสัมพันธ์</a>
+        <a href="personnel.html">บุคลากร</a>
+        <a href="#contact">ติดต่อเรา</a>
+        <a href="services.html">บริการ</a>
+        <a href="map.html">แผนที่</a>
+    </nav>
+    
+    <main>
+        <div id="home" class="section">
+            <h2>ยินดีต้อนรับสู่สำนักงานจังหวัดมหาสารคาม</h2>
+            <p>ติดตามข่าวสารและกิจกรรมต่างๆ ของจังหวัดมหาสารคามได้ที่นี่</p>
+        </div>
+
+        <div id="about" class="section">
+            <h2>เกี่ยวกับเรา</h2>
+            <p>สำนักงานจังหวัดมหาสารคามก่อตั้งขึ้นเพื่อให้บริการด้านการบริหารงานของจังหวัด รวมถึงการดูแลประชาชนและพัฒนาเศรษฐกิจในพื้นที่</p>
+        </div>
+
+        <div id="news" class="section">
+            <h2>ข่าวประชาสัมพันธ์</h2>
+            <ul>
+                <li><a href="#">ข่าวประชาสัมพันธ์ 1: กิจกรรมอบรมผู้ประกอบการท้องถิ่น</a></li>
+                <li><a href="#">ข่าวประชาสัมพันธ์ 2: การประชุมการพัฒนาเศรษฐกิจจังหวัด</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>กิจกรรม</h2>
+            <ul>
+                <li><a href="#">กิจกรรม 1: การแข่งขันกีฬาเยาวชน</a></li>
+                <li><a href="#">กิจกรรม 2: งานเทศกาลผลไม้</a></li>
+            </ul>
+        </div>
+
+        <div id="services" class="section">
+            <h2>บริการ</h2>
+            <ul>
+                <li>การขอข้อมูลและเอกสารราชการ</li>
+                <li>การให้คำปรึกษาด้านการพัฒนาชุมชน</li>
+            </ul>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>ติดต่อเรา</h2>
+            <p>ที่อยู่: ศาลากลางจังหวัดมหาสารคาม ชั้น 4 ถนนเลี่ยงเมืองมหาสารคาม-ร้อยเอ็ด, ตำบลแวงน่าง, อำเภอเมืองมหาสารคาม, จังหวัดมหาสารคาม 44000</p>
+            <p>อีเมล: <a href="mailto:dir.mhk@gmail.com">dir.mhk@gmail.com</a></p>
+            <p>โทรศัพท์: 043-777356</p>
+            <p>โทรสาร: 043-777624</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 สำนักงานจังหวัดมหาสารคาม</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลบุคลากร - สำนักงานจังหวัดมหาสารคาม</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #cc6600;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #ff9900;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #cc6600;
+        }
+        main {
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-left: 5px solid #cc6600;
+        }
+        .person-group {
+            margin-bottom: 20px;
+        }
+        .person {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .person img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid #cc6600;
+        }
+        footer {
+            background-color: #cc6600;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        #search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #search {
+            padding: 10px;
+            width: 60%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #search-btn {
+            padding: 10px 15px;
+            background-color: #cc6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #search-btn:hover {
+            background-color: #ff9900;
+            #back-to-top {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: none; /* ซ่อนปุ่มไว้ก่อน */
+                background-color: #cc6600;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                font-size: 16px;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                transition: opacity 0.3s;
+            }
+            #back-to-top:hover {
+                background-color: #ff9900;
+            }
+            
+        }
+    </style>
+    <script>
+        // แสดงหรือซ่อนปุ่มย้อนกลับตามการเลื่อน
+        window.onscroll = function() {
+            const button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block'; // แสดงปุ่ม
+            } else {
+                button.style.display = 'none'; // ซ่อนปุ่ม
+            }
+        };
+        // ฟังก์ชันเลื่อนกลับไปด้านบน
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+    
+    <script>
+        function searchPeople() {
+            const searchInput = document.getElementById("search").value.toLowerCase();
+            const people = document.querySelectorAll(".person p");
+            people.forEach(person => {
+                if (person.textContent.toLowerCase().includes(searchInput)) {
+                    person.parentElement.style.display = "flex";
+                } else {
+                    person.parentElement.style.display = "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <button id="back-to-top" onclick="scrollToTop()">ย้อนกลับ</button>
+
+    <header>
+        <h1>ข้อมูลบุคลากร - สำนักงานจังหวัดมหาสารคาม</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#group1">กลุ่มงานอำนวยการ</a></li>
+            <li><a href="#group2">กลุ่มยุทธศาสตร์</a></li>
+            <li><a href="#group3">กลุ่มศูนย์ดำรงธรรม</a></li>
+            <li><a href="#group4">กลุ่มตรวจสอบภายใน</a></li>
+            <li><a href="#group5">กลุ่มงานบริหารทรัพยากรบุคคล</a></li>
+        </ul>
+    </nav>
+    <main>
+        <main>
+            
+            <!-- เนื้อหาของกลุ่มงาน -->
+            <div class="person-group">
+               
+                <!-- รายชื่อบุคลากร -->
+            </div>
+        
+            <!-- ปุ่มกลับหน้าแรก -->
+            <a href="index.html" class="back-to-home">กลับหน้าแรก</a>
+        </main>
+        
+        <div id="search-bar">
+            <input type="text" id="search" placeholder="ค้นหาชื่อบุคลากร" />
+            <button id="search-btn" onclick="searchPeople()">ค้นหา</button>
+        </div>
+        <h2 id="group1">กลุ่มงานอำนวยการ</h2>
+        <div class="person-group">
+            <div class="person">
+                <img src="images/ผออำนวยการ.jpg" alt="นายธีร์ สิทธิหาโคตร">
+                <p>นายธีร์ สิทธิหาโคตร (ผู้อำนวยการกลุ่มอำนวยการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/นักจัดการงานทั่วไปชำนาญการ.jpg" alt="นายศุภมิตร วงษ์สงคราม">
+                <p>นายศุภมิตร วงษ์สงคราม (นักจัดการงานทั่วไปชำนาญการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/พนักงานวิชาการเงินและบัญชี.jpg" alt="นางณัฏิฐิยานน์ โพธิโสภากุล">
+                <p>นางณัฏิฐิยานน์ โพธิโสภากุล (พนักงานวิชาการเงินและบัญชี)</p>
+            </div>
+            <div class="person">
+                <img src="images/นักจัดการงานทั่วไปชำนาญการ.jpg" alt="นางสาวชลธิชา วงศ์บุตร">
+                <p>นางสาวชลธิชา วงศ์บุตร (นักจัดการงานทั่วไปชำนาญการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/นายช่างไฟฟ้าชำนาญงาน.jpg" alt="นายสุภาพ ผิวผุด">
+                <p>นายสุภาพ ผิวผุด (นักจัดการงานทั่วไปชำนาญการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/เจ้าพนักงานธุรการชำนาญงาน.jpg" alt="นางสาวกาญจนา โลหิตยา">
+                <p>นางสาวกาญจนา โลหิตยา (เจ้าพนักงานธุรการชำนาญงาน)</p>
+            </div>
+            <div class="person">
+                <img src="images/นายช่างไฟฟ้าชำนาญงาน1.jpg" alt="นายสุพจน์ นุนหลักคำ">
+                <p>นายสุพจน์ นุนหลักคำ (นายช่างไฟชำนาญการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/พนักงานวิชาการพัสดุ.jpg" alt="นางสาวอมรรัตน์ เหล่าวงษา">
+                <p>นางสาวอมรรัตน์ เหล่าวงษา (พนักงานวิชาการพัสดุ)</p>
+            </div>
+            <div class="person">
+                <img src="images/พนักงานวิชาการเงินและบัญชี.jpg" alt="นางสาวลัดดาวัลย์ สีลานนท์">
+                <p>นางสาวลัดดาวัลย์ สีลานนท์ (พนักงานวิชาการเงินและบัญชี)</p>
+            </div>
+            <div class="person">
+                <img src="images/เจ้าหน้าที่สนับสนุนงานอำนวยการ.jpg" alt="นางสาวศุภลักษณ์ เต็งสกุล">
+                <p>นางสาวศุภลักษณ์ เต็งสกุล (จนท.สนับสนุนงานอำนวยการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/(เจ้าหน้าที่สนับสนุนงานอำนวยการ1.jpg" alt="นางสาวอรอุมา ทับพิมแสน">
+                <p>นางสาวอรอุมา ทับพิมแสน (จนท.สนับสนุนงานอำนวยการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/พนักงานพิมพ์ ส 4.jpg" alt="นายสมพงษ์ ธานี">
+                <p>นายสมพงษ์ ธานี (พนักงานพิมพ์ ส๔)</p>
+            </div>
+            <div class="person">
+                <img src="images/สนับสนุนงานอำนวยการ.jpg" alt="นายสุรศักดิ์ ระโยธี">
+                <p>นายสุรศักดิ์ ระโยธี (จนท.สนับสนุนงานอำนวยการ)</p>
+            </div>
+            <div class="person">
+                <img src="images/สนับสนุนงานอำนวยการ.jpg" alt="นางสาวกาญจนา จิตจง">
+                <p>นางสาวกาญจนา จิตจง (จนท.สนับสนุนงานอำนวยการ)</p>
+            </div>
+        </div>
+        </div>
+        <h2 id="group2">กลุ่มยุทธศาสตร์และข้อมูลเพื่อการพัฒนา</h2>
+        <div class="person-group">
+            <div class="person">
+                <img src="images/ผอกลุ่มยุทธ.jpg" alt="นายกฤตภัค โนมะยา">
+                <p>นายกฤตภัค โนมะยา (ผู้อำนวยการกลุ่มยุทธศาสตร์)</p>
+            </div>
+            <div class="person">
+                <img src="images/nalitip.jpg" alt="นางสาวนลิทิพย์ สีชะนะ">
+                <p>นางสาวนลิทิพย์ สีชะนะ (นักวิชาการพัฒนาชุมชน)</p>
+            </div>
+            <div class="person">
+                <img src="images/chonthicha.jpg" alt="นางสาวชลธิชา วงศ์บุตร">
+                <p>นางสาวชลธิชา วงศ์บุตร (นักวิชาการพัฒนาชุมชน)</p>
+            </div>
+            <div class="person">
+                <img src="images/komkrit.jpg" alt="นายคมกฤต พูนหนู">
+                <p>นายคมกฤต พูนหนู (นักวิชาการพัฒนาชุมชน)</p>
+            </div>
+            <div class="person">
+                <img src="images/supanit.jpg" alt="นายสุปาณิต ใจตู้">
+                <p>นายสุปาณิต ใจตู้ (นักวิชาการพัฒนาชุมชน)</p>
+            </div>
+            <div class="person">
+                <img src="images/suvit.jpg" alt="นายสุวิทย์ โพธิ์ทิม">
+                <p>นายสุวิทย์ โพธิ์ทิม (เจ้าพนักงานพัฒนาชุมชน)</p>
+            </div>
+            <div class="person">
+                <img src="images/krittika.jpg" alt="นางสาวกฤติกา จันทร์พาณิช">
+                <p>นางสาวกฤติกา จันทร์พาณิช (พนักงานวิชาการพัฒนาชุมชน)</p>
+            </div>
+            <div class="person">
+                <img src="images/thanawat.jpg" alt="นายธนวัตร์ เสรีศิริ">
+                <p>นายธนวัตร์ เสรีศิริ (เจ้าหน้าที่ศูนย์บริการจุดเดียวเบ็ดเสร็จ)</p>
+            </div>
+        </div>
+
+        <h2 id="group3">กลุ่มศูนย์ดำรงธรรม</h2>
+        <div class="person-group">
+            <div class="person">
+                <img src="images/ผู้อำนวยการกลุ่มงานศูนย์ดำรงธรรม.jpg" alt="นายนำโชค ราตรีโชติ">
+                <p>นายนำโชค ราตรีโชติ (ผู้อำนวยการกลุ่มงานศูนย์ดำรงธรรม)</p>
+        </div>
+        <div class="person">
+            <img src="images/wiroj.jpg" alt="นายวิโรจน์ อรรคแสง">
+            <p>นายวิโรจน์ อรรคแสง (นักวิเคราะห์นโยบายและแผนปฏิบัติการ)</p>
+        </div>
+        <div class="person">
+            <img src="images/piyanee.jpg" alt="นางสาวปิยาณี โคตะนันต์">
+            <p>นางสาวปิยาณี โคตะนันต์ (นักวิเคราะห์นโยบายและแผนปฏิบัติการ)</p>
+        </div>
+        <div class="person">
+            <img src="images/supinya.jpg" alt="นางสาวสุพิญา จันทรัง">
+            <p>นางสาวสุพิญา จันทรัง (นักวิเคราะห์นโยบายและแผนปฏิบัติการ)</p>
+        </div>
+                </div>
+                <h2 id="group4">กลุ่มตรวจสอบภายใน</h2>
+        <div class="person-group">
+            <div class="person">
+                <img src="images/ตรวจสอบภายใน.jpg" alt="นางเพ็ญรัตน์ กองสมบัติ">
+                <p>นางเพ็ญรัตน์ กองสมบัติ (ผู้ตรวจสอบภายใน)</p>
+            </div>
+        </div>
+
+        <h2 id="group5">กลุ่มงานบริหารทรัพยากรบุคคล</h2>
+        <div class="person-group">
+            <div class="person">
+                <img src="images/บริหารทรัพยากรบุคคล.jpg" alt="นางสาวพรพัสกร วงษาเวียง">
+                <p>นางสาวพรพัสกร วงษาเวียง (ผู้อำนวยการกลุ่มงานบริหารทรัพยากรบุคคล)</p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 สำนักงานจังหวัดมหาสารคาม</p>
+        <p>ติดต่อ: <a href="tel:043123456">043-123456</a> | <a href="mailto:info@mahasarakham.go.th">info@mahasarakham.go.th</a></p>
+    </footer>
+</body>
+</html>

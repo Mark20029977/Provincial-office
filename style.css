@@ -1,0 +1,206 @@
+/* การตั้งค่าทั่วไป */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* พื้นหลังอ่อน */
+    background-image: linear-gradient(45deg, rgba(204, 102, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(204, 102, 0, 0.1) 50%, rgba(204, 102, 0, 0.1) 75%, transparent 75%, transparent);
+    background-size: 10px 10px; /* เส้นลายที่สวยงาม */
+}
+
+/* ส่วนหัว */
+header {
+    background-color: #cc6600; /* สีส้มเข้ม */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* การตั้งค่าโลโก้ */
+header img.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid #cc6600; /* กรอบสีเดียวกับ header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้โลโก้ */
+}
+
+/* ชื่อหัวข้อใน header */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    flex: 1;
+}
+
+/* เมนูนำทาง */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ff9900; /* สีส้มอ่อน */
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s ease; /* เพิ่มการเปลี่ยนสีอย่างนุ่มนวล */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00; /* สีทองเมื่อ hover */
+}
+
+/* ส่วนเนื้อหา */
+main {
+    padding: 20px;
+    background-color: #f9f2ec; /* พื้นหลังเนื้อหา */
+}
+
+/* ส่วนกลุ่มงาน */
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid #ff9900; /* เส้นขอบสีส้มอ่อน */
+}
+
+/* ส่วนท้าย */
+footer {
+    background-color: #cc6600; /* สีส้มเข้ม */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* การจัดตำแหน่งบุคลากร */
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.person img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    border: 2px solid #cc6600; /* กรอบสีเดียวกับ header */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* เพิ่มเงาให้ภาพ */
+}
+
+/* การจัดตำแหน่งผู้อำนวยการ */
+.main-person {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+/* กลุ่มยุทธศาสตร์และข้อมูลเพื่อการพัฒนา */
+.main-person {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+/* กลุ่มศูนย์ดำรงธรรม */
+.main-person {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+/* การแสดงหลายแถว */
+.people-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ลายเส้นเบาๆสำหรับfooter */
+footer {
+    background-color: #cc6600;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%);
+    background-size: 20px 20px;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* ซ่อนปุ่มไว้ก่อน */
+    background-color: #cc6600;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+}
+#back-to-top:hover {
+    background-color: #ff9900;
+}
+#back-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #cc6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.back-to-home:hover {
+    background-color: #ff9900;
+}
+#search-btn:hover {
+    background-color: #ff9900;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* ซ่อนปุ่มไว้ก่อน */
+    background-color: #cc6600;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+}
+#back-to-top:hover {
+    background-color: #ff9900;
+}

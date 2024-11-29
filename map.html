@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผนที่สำนักงานจังหวัดมหาสารคาม</title>
+    <style>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #cc6600;
+                color: white;
+                text-align: center;
+                padding: 20px;
+            }
+            nav {
+                background-color: #ff9900;
+                padding: 10px;
+                text-align: center;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+         
+            nav a {
+                text-decoration: none;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 3px;
+                transition: background-color 0.3s;
+            }
+      
+           
+            h2 {
+                background-color: #f0f0f0;
+                padding: 10px;
+                border-left: 5px solid #cc6600;
+                margin-top: 20px;
+            }
+           
+            .person img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 15px;
+                border: 2px solid #cc6600;
+            }
+            footer {
+                background-color: #cc6600;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+        section {
+            text-align: center; /* จัดเนื้อหาใน section ให้อยู่กลาง */
+            margin: 20px 0;
+        }
+        iframe {
+            display: block;
+            margin: 0 auto; /* จัด iframe ให้อยู่กลาง */
+            border: 0;
+            border-radius: 10px; /* เพิ่มความโค้งมน */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ iframe */
+        }
+        footer {
+            background-color: #cc6600;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+           <li><a href="index.html">หน้าแรก</a></li> <!-- Fixed to reload the page -->
+        </ul>
+    </nav>
+
+    <header>
+        <h1>แผนที่สำนักงานจังหวัดมหาสารคาม</h1>
+    </header>
+
+    <main>
+        <section>
+            <p>ที่ตั้งของสำนักงานจังหวัดมหาสารคาม: ศาลากลางจังหวัดมหาสารคาม</p>
+            <!-- แผนที่ Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.6794138937187!2d103.31012391514697!3d16.186206388779854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122be43f0b4cf4b%3A0xb06a77b5a845931!2z4Liq4LiW4LmJ4Lit4LiB4Lij4Liy4Lij4Lix4LiB4Lij4Liy4Lij4Li44LiB4Lij4LmJ4Liy4LiK4Li14Lii4LmMIOC4quC4suC4guC4reC4suC4i-C4o-C4o-C4oSDguJfguLLguKPguLDguKHguYjguIcg4LmA4LiZ4LmA4LiC4LmI4Li04Lia4LiyIOC4o-C4suC4guC4lOC4suC4reC4hOC5hOC4i-C4suC4jeC4meC4sOC4gOC5iOC5hOC4reC4t-C4og!5e0!3m2!1sth!2sth!4v1698445223656!5m2!1sth!2sth"
+                width="600" 
+                height="450" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 สำนักงานจังหวัดมหาสารคาม</p>
+    </footer>
+</body>
+</html>
